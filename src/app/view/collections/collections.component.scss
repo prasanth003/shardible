@@ -1,0 +1,35 @@
+@import '/src/assets/shardible/styles/variables.scss';
+
+.container {
+    padding: 100px 20px 20px 20px;
+}
+
+.flex-box {
+    display: flex;
+    min-width: 100%;
+
+    .left-column {
+        flex: 3;
+        padding: 20px;
+        min-width: 300px;
+        background-color: transparent;
+        padding-top: 60px;
+        position: relative;
+
+        .v-center {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    
+    .right-column {
+        flex: 9;
+        padding: 20px;
+        overflow-x: auto;
+    }
+    
+}
+

@@ -1,0 +1,74 @@
+@import '/src/assets/shardible/styles/variables.scss';
+
+footer {
+  background-color: $footer-card;
+  color: #fff;
+  padding: 1em;
+  margin: 0 !important;
+
+  .center-container {
+    text-align: center;
+    padding: 30px;
+
+    .icons-container {
+      margin: 20px 0px;
+      
+      .icon-button {
+        font-size: 25px;
+        margin: 10px 20px;
+        color: $text-color;
+        transition: all .4s;
+      }
+
+      .icon-button:hover {
+        color: $third-color;
+      }
+
+    }
+
+  }
+}
+
+hr {
+  border-top: 1px solid #ffffff3f;
+}
+
+.copy-right-section {
+  display: flex;
+  justify-content: space-between;
+
+  .copyright {
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    margin-bottom: 0px;
+    font-weight: 300;
+  }
+
+  .quick-menu {
+    
+    a {
+      color: $text-color;
+      font-size: 12px;
+      text-decoration: none;
+      margin: 0 25px;
+      transition: .4s;
+    }
+
+    a:last-child {
+      margin-right: 0px;
+    }
+
+    a:hover {
+      color: $third-color;
+    }
+  }
+
+}
+
+
+@media (max-width: 767px) {
+  .footer {
+    height: auto;
+    line-height: normal;
+  }
+}

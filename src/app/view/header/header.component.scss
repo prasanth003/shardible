@@ -1,0 +1,123 @@
+@import '/src/assets/shardible/styles/variables.scss';
+
+.navbar-expand-lg.transparent-background {
+    background: transparent !important;
+}
+
+.navbar.center .navbar-inner {
+    text-align: center;
+}
+.navbar.center .navbar-inner .nav {
+    float: none;
+    display:inline-block;
+    vertical-align: middle;
+}
+
+.navbar-sticky {
+    position: fixed;
+    top: 0;
+    padding: 5px 20px !important;
+
+    .marketplace-btn {
+        right: 20px !important;
+    }
+}
+
+.navbar {
+    padding: 20px 100px;
+    width: 100% !important;
+    margin: 0;
+    opacity: 0.9;
+    z-index: 100;
+    background-color: #07071C !important;
+    transition: all 0.3s;
+
+    .navbar-brand {
+
+        .navbar-logo {
+            width: 30px;
+            height: 30px;
+        }
+    
+        .brand {
+            font-size: 30px;
+            font-family: $font-family-leagueSpartan-semiBold;
+            position: relative;
+            top: 5px;
+            left: 10px;
+        }
+    }
+
+    .nav-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .marketplace-btn {
+        position: absolute;
+        right: 100px;
+        padding: 10px 20px;
+        cursor: pointer;
+        color: $dark-text;
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+        font-family: $font-family-medium;
+        font-size: 15px;
+        border-radius: 5px;
+        transition: .4s;
+    }
+
+    .marketplace-btn:hover {
+        background-color: transparent;
+        border: 1px solid $secondary-color;
+        color: $secondary-color;
+    }
+}
+
+
+
+.centerContent {
+    text-align: left;
+    justify-content: flex-start !important;
+    margin: auto auto;
+}
+
+.navbar-nav {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.navbar > a {
+    color: $text-color !important
+}
+
+.nav-link {
+    color: $third-color !important
+}
+
+/* @media only screen and (max-width: 1706px) {
+    .navbar{
+      max-width: 1380px;
+    }
+  } */
+
+/* @media only screen and (max-width: 1025px) {
+    .marketplace {
+      margin-left: 33%;
+      margin-bottom: -30px
+    }
+  } */
+
+
+.nml-4 {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    backdrop-filter: blur(15px) !important;
+    margin-left: 0% !important;
+}
+
+.navbar-nav > li {
+    padding-left: 35px
+}

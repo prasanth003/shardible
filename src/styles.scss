@@ -1,0 +1,176 @@
+@import "./assets/shardible/styles/variables.scss";
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $third-color;
+    transition: .4s;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: $font-family-base;
+    background-color: $body-bg !important;
+    color: $text-color !important;
+}
+
+.title {
+    font-weight: 700;
+    font-family: $font-family-base;
+    font-size: 48px;
+    line-height: 140%;
+    color: $text-color;
+}
+
+.layout {
+    padding: 0px 100px;
+}
+
+.heading {
+    font-size: 32px !important;
+    font-weight: 700;
+    font-family: $font-family-base;
+    color: $text-color;
+}
+
+.heading-2 {
+    font-size: 24px !important;
+    font-weight: 600;
+    font-family: $font-family-base;
+    color: $text-color;
+}
+
+.paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $font-family-light;
+    letter-spacing: 0.5px;
+}
+
+.colored-text {
+    color: $secondary-color;
+}
+
+.paragraph-highlighted {
+    font-size: 16px;
+    font-family: $font-family-medium;
+    margin: 0px;
+}
+
+.paragraph-lighter {
+    font-size: 14px;
+    font-family: $font-family-base;
+    color: $third-color;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+}
+
+.shardible-card {
+    border-radius: 5px;
+    background-color: $card-bg;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.shardible-btn {
+    padding: 10px 18px;
+    cursor: pointer;
+    color: $dark-text;
+    background-color: $secondary-color;
+    border: 1px solid $secondary-color;
+    font-family: $font-family-medium;
+    font-size: 15px;
+    transition: .4s;
+    border-radius: 5px;
+}
+
+.shardible-btn:hover {
+    background-color: $third-color;
+    border: 1px solid $third-color;
+}
+
+
+.thumbnail-card {
+    border-radius: 5px;
+    background-color: $card-bg;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    cursor: pointer;
+
+    .thumbnail-img-container {
+        overflow: hidden;
+
+        .thumbnail {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    }
+
+    .thumbnail-content {
+        padding-top: 5px;
+
+        .thumbnail-horizontal {
+            flex: auto;
+            padding-top: 3px;
+
+            .thumbnail {
+                width: 18px;
+                height: 18px;
+                border-radius: 50px;
+                float: left;
+            }
+
+            .thumbnail-txt {
+                position: relative;
+                left: 5px;
+                margin-bottom: 0px;
+            }
+
+        }
+    }
+}
+
+.thumbnail-card .thumbnail-img-container figure img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+}
+
+.thumbnail-card .thumbnail-img-container figure:hover img {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+}
