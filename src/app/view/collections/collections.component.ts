@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { iCollection } from 'src/app/interface/collection.interface';
 
 @Component({
   selector: 'shardible-collections',
@@ -10,7 +11,7 @@ export class CollectionsComponent implements OnInit {
   
   public sectionHeight: number = 200;
 
-  customOptions: OwlOptions = {
+  public customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
     touchDrag: true,
@@ -20,7 +21,7 @@ export class CollectionsComponent implements OnInit {
     navText: ['', ''],
     autoWidth: true,
     autoplay: true,
-    autoplayTimeout: 2000,
+    autoplayTimeout: 3000,
     autoplayHoverPause: true,
     smartSpeed: 250,
     animateIn: true,
@@ -41,6 +42,79 @@ export class CollectionsComponent implements OnInit {
     },
     nav: false
   }
+
+  public collections: iCollection[] = [
+    {
+      thumbnail: 'sliderimg1.png',
+      author: {
+        title: 'Krill',
+        name: 'MAWC',
+        thumb: 'Ellipse 6.png'
+      },
+      price: '80 SHM',
+      bidRate: '7.59 wSHM'
+    },
+    {
+      thumbnail: 'sliderimg2.png',
+      author: {
+        title: 'Jellyfish',
+        name: 'MAWC',
+        thumb: 'Ellipse 6.png'
+      },
+      price: '80 SHM',
+      bidRate: '7.59 wSHM'
+    },
+    {
+      thumbnail: 'sliderimg3.png',
+      author: {
+        title: 'Geoduck',
+        name: 'MAWC',
+        thumb: 'Ellipse 6.png'
+      },
+      price: '80 SHM',
+      bidRate: '7.59 wSHM'
+    },
+    {
+      thumbnail: 'sliderimg4.png',
+      author: {
+        title: 'Sedna',
+        name: 'MAWC',
+        thumb: 'Ellipse 6.png'
+      },
+      price: '80 SHM',
+      bidRate: '7.59 wSHM'
+    },
+    {
+      thumbnail: 'sliderimg5.png',
+      author: {
+        title: 'Namora',
+        name: 'MAWC',
+        thumb: 'Ellipse 6.png'
+      },
+      price: '80 SHM',
+      bidRate: '7.59 wSHM'
+    },
+    {
+      thumbnail: 'sliderimg6.png',
+      author: {
+        title: 'Marrina Smallwood',
+        name: 'MAWC',
+        thumb: 'Ellipse 6.png'
+      },
+      price: '80 SHM',
+      bidRate: '7.59 wSHM'
+    },
+    {
+      thumbnail: 'sliderimg10.png',
+      author: {
+        title: 'Stingray',
+        name: 'MAWC',
+        thumb: 'Ellipse 6.png'
+      },
+      price: '80 SHM',
+      bidRate: '7.59 wSHM'
+    }
+  ] 
 
   constructor() { }
 

@@ -20,8 +20,8 @@
     
             <div>
                 <owl-carousel-o [options]="customOptions">
-                    <ng-template carouselSlide *ngFor="let i of [1,2,3,4,5,6,7,8,9]">
-                        <shardible-collections-card></shardible-collections-card>
+                    <ng-template carouselSlide *ngFor="let collection of collections">
+                        <shardible-collections-card [collection]="collection"></shardible-collections-card>
                     </ng-template>
                 </owl-carousel-o>
             </div>

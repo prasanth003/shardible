@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import { iCollection } from 'src/app/interface/collection.interface';
 
 @Component({
   selector: 'shardible-collections-card',
@@ -9,6 +10,7 @@ import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 export class CollectionsCardComponent implements OnInit {
 
   public moreIcon =  faEllipsisV;
+  @Input() collection!: iCollection;
 
   constructor() { }
 

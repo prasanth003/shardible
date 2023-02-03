@@ -1,6 +1,21 @@
 <div class="container">
     <h6 class="heading mb-3">Product Roadmap</h6>
-    <p class="paragraph">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, repudiandae dolores neque sed porro vitae eaque rerum unde sapiente ratione expedita illum ex eum minus asperiores quibusdam aspernatur adipisci. Exercitationem.
-    </p>
+
+    <section class="timeline" *ngIf="roadmapList && roadmapList.length > 0">
+        <ul>
+            <li class="path" [ngClass]="{'active': isAchived(roads.time) }" *ngFor="let roads of roadmapList; let i = index">
+                <div class="timeline-card">
+                    <div class="timeline-info">
+                        <h6 class="heading-2">{{ roads.name }}</h6>
+                        <ol>
+                            <li *ngFor="let points of roads.points">
+                                {{ points }}
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
 </div>
