@@ -35,7 +35,7 @@ export class RoadmapComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       name: 'Phase 3  - Mar - April 2023',
-      time: new Date('Mar 01, 2023'),
+      time: new Date('Apr 01, 2023'),
       points: [
         'Shardible Beta Live - Mainnet',
         'Marketing Campaigns',
