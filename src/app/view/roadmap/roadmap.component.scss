@@ -36,6 +36,8 @@
         padding: 15px;
         background: $card-bg;
         text-align: left;
+        border-radius: 5px;
+        border: 1px solid $card-bg;
     }
 
     .timeline ul li .timeline-card::before {
@@ -52,7 +54,7 @@
     }
 
     .timeline ul li:nth-child(odd) .timeline-card::before {
-        left: -15px;
+        left: -17px;
         border-width: 8px 16px 8px 0;
         border-color: transparent $card-bg transparent transparent;
     }
@@ -62,16 +64,9 @@
     }
 
     .timeline ul li:nth-child(even) .timeline-card::before {
-        right: -15px;
+        right: -17px;
         border-width: 8px 0 8px 16px;
         border-color: transparent transparent transparent $card-bg;
-    }
-
-    time {
-        display: block;
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-bottom: 8px;
     }
 
     .timeline-info {
@@ -116,6 +111,10 @@
 
 .active {
     background-color: $secondary-color !important;
+
+    .timeline-card {
+        border: 1px solid $third-color !important;
+    }
 }
 
 .in-view {

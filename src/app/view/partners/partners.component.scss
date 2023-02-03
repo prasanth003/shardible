@@ -1,4 +1,36 @@
+@import '/src/assets/shardible/styles/variables.scss';
+
 .container {
     text-align: center;
     padding-top: 50px;
+
+    .partners {
+        display: inline-block;
+        margin: 10px 10px;
+
+        .partner-button {
+            padding: 10px 20px;
+            border: none;
+            display: flex;
+            background: transparent;
+            color: $text-color;
+            transition: all .4s;
+            border-radius: 5px;
+
+            .shardem-logo {
+                width: 30px;
+                height: 30px;
+                float: left;
+            }
+
+            .text {
+                margin-left: 10px;
+                margin-top: 1px;
+            }
+        }
+
+        .partner-button:hover {
+            background-color: $card-bg;
+        }
+    }
 }
