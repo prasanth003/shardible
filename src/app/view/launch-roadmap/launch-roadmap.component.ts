@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LaunchRoadmapComponent implements OnInit {
 
+  public loaded: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(()  => {
+      this.loaded = true
+    }, 5000);
   }
 
 }

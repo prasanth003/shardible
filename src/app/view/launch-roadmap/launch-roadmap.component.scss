@@ -1,4 +1,39 @@
+@import '/src/assets/shardible/styles/variables.scss';
+
 .container {
     text-align: center;
     padding-top: 50px;
+
+    .launch-roadmap {
+        border-radius: 5px;
+        background: $card-bg;
+
+        .launch-bg {
+            padding: 20px;
+            position: relative; 
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+
+            .svg-container {
+                position: relative;
+                width: 100%;
+                overflow-x: auto;
+            }
+        }
+
+        .launch-bg::before {    
+            content: "";
+            background-image: url('../../../assets/shardible/img/launch-bg.png');
+            background-size: cover;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0.1;
+      }
+    }   
 }
