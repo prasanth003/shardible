@@ -1,3 +1,5 @@
+@import '/src/assets/shardible/styles/variables.scss';
+
 .container {
     padding: 100px 20px 20px 20px;
     
@@ -19,6 +21,46 @@
             line-height: 26px;
             margin-top: 15px;
         } 
+    }
+
+    .blob {
+        background: #363657;
+        border-radius: 50%;
+        margin: 10px;
+        height: 48px;
+        width: 48px;
+        box-shadow: 0 0 0 0 #232345;
+        transform: scale(1);
+        animation: pulse 2s ease-out infinite;
+        position: relative;
+        top: -10px;
+        left: -12px;
+
+        .icons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $third-color;
+            font-size: 22px;
+        }
+    }
+    
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 #232345;
+        }
+    
+        70% {
+            transform: scale(1.02);
+            box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+        }
+    
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        }
     }
 }
 
