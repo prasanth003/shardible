@@ -174,3 +174,37 @@ body {
     -webkit-transform: scale(1.4);
     transform: scale(1.4);
 }
+
+@media only screen and (max-width: 720px) { 
+    .title {
+        font-size: 40px !important;
+        line-height: 120% !important;
+    }
+    
+    .heading {
+        font-size: 28px !important;
+    }
+    
+    .heading-2 {
+        font-size: 20px !important;
+    }
+    
+    .paragraph {
+        font-size: 15px !important;
+        line-height: 140%;
+        margin-bottom: 0px !important;
+    }
+    
+    .colored-text {
+        color: $secondary-color;
+    }
+    
+    .paragraph-highlighted {
+        font-size: 15px !important;
+        line-height: 140%;
+    }
+    
+    .paragraph-lighter {
+        font-size: 13px !important;
+    }
+}

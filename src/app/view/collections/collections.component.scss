@@ -33,3 +33,30 @@
     
 }
 
+
+@media only screen and (max-width: 990px) {
+    
+    .container {
+        padding: 20px !important;
+    }
+
+    .flex-box {
+        display: block !important;
+
+        .left-column, .right-column { 
+            display: block !important;
+            padding: 0px !important;
+        }
+
+        .left-column { 
+            width: 100% !important;
+            margin-bottom: 20px;
+            .v-center { 
+                position: relative !important;
+                top: 0px !important;
+                left: 0px !important;
+                transform: translate(0, 0) !important;
+            }
+        }
+    }
+}

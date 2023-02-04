@@ -67,8 +67,38 @@ hr {
 
 
 @media (max-width: 767px) {
-  .footer {
+  footer {
     height: auto;
     line-height: normal;
+  }
+}
+
+@media only screen and (max-width: 990px) { 
+  footer { 
+    padding: 20px !important;
+
+    .center-container { 
+      padding: 0px !important;
+
+      .icons-container { 
+        margin: 0px !important;
+
+        .icon-button  {
+          margin: 10px !important;
+        }
+      }
+    }
+
+    .copy-right-section { 
+      display: block !important;
+      text-align: center;
+
+      .quick-menu {
+        margin-top: 10px;
+        a {
+          margin: 10px !important;
+        }
+      }
+    }
   }
 }

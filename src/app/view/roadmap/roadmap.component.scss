@@ -130,10 +130,6 @@
     background: $third-color !important;
 }
 
-// .container .timeline ul li.in-view {
-//     // background: $third-color !important;
-// }
-
 .timeline ul li.active.in-view::after {
     background: $secondary-color !important;
 }
@@ -158,32 +154,44 @@
     opacity: 1;
 }
 
-@media screen and (max-width: 900px) {
-    .timeline ul li .timeline-card {
-        width: 250px;
-    }
+@media only screen and (max-width: 950px) {
 
-    .timeline ul li:nth-child(even) .timeline-card {
-        left: -289px;
+    .container {
+        padding: 20px !important;
+        position: relative !important;
+
+        .timeline ul {
+            padding: 0px !important;
+        }
+    
+        .timeline ul li {
+            padding-top: 20px !important;
+            margin: 0 0 !important;
+        }
+
+        .timeline ul li:nth-child(odd) .timeline-card {
+            left: 35px !important;
+        }
+
+        .timeline ul li:nth-child(even) .timeline-card {
+            left: 35px !important;
+        }
+
+        .timeline ul li:nth-child(even) .timeline-card {
+            transform: translate3d(0, 0, 0) !important;
+        }
+
+        .timeline ul li:nth-child(even) .timeline-card::before {
+            left: -17px !important;
+            border-width: 8px 16px 8px 0 !important;
+            border-color: transparent $card-bg transparent transparent !important;
+        }
     }
+      
 }
 
-@media screen and (max-width: 600px) {
-    .timeline ul li {
-        margin-left: 20px;
-    }
-
+@media only screen and (max-width: 600px) { 
     .timeline ul li .timeline-card {
-        width: calc(100vw - 91px);
-    }
-
-    .timeline ul li:nth-child(even) .timeline-card {
-        left: 45px;
-    }
-
-    .timeline ul li:nth-child(even) .timeline-card::before {
-        left: -15px;
-        border-width: 8px 16px 8px 0;
-        border-color: transparent $card-bg transparent transparent;
+        min-width: calc(100vw - 90px) !important;
     }
 }
