@@ -16,7 +16,6 @@ import { CollectionsCardComponent } from './collections/collections-card/collect
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FeaturesComponent } from './features/features.component';
 import { LaunchTimerComponent } from './launch-timer/launch-timer.component';
-import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
