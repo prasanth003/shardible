@@ -1,47 +1,47 @@
 
 <div class="container">
-    <h1 class="heading">Shardible s Marketplace Launches in</h1>
-</div>
+    <h1 class="heading">Shardible's Marketplace Launches in</h1>
 
-<div class="timer">
+    <div class="timer">
     
-    <div id="time">
-        
-        <div class="circle" style="--clr: #00E0DD;">
-            <div class="dots day_dot"></div>
-            <svg>
-                <circle cx="100" cy="100" r="90"></circle>
-                <circle cx="100" cy="100" r="90" [style.strokeDashoffset]="daysStroke"></circle>
-            </svg>
-            <div id="days"> {{ days }} </div>
+        <div id="time">
+            
+            <div class="circle" style="--clr: #00E0DD;">
+                <div class="dots day_dot"></div>
+                <svg>
+                    <circle cx="100" cy="100" r="90"></circle>
+                    <circle cx="100" cy="100" r="90" [style.strokeDashoffset]="daysStroke"></circle>
+                </svg>
+                <div id="days"> {{ days }} </div>
+            </div>
+    
+            <div class="circle" style="--clr: #00E0DD">
+                <div class="dots hr_dot"></div>
+                <svg>
+                    <circle cx="100" cy="100" r="90"></circle>
+                    <circle cx="100" cy="100" r="90" [style.strokeDashoffset]="hoursStroke"></circle>
+                </svg>
+                <div id="hours"> {{ hours }} </div>
+            </div>
+    
+            <div class="circle" style="--clr: #00E0DD">
+                <div class="dots min_dot"></div>
+                <svg>
+                    <circle cx="100" cy="100" r="90"></circle>
+                    <circle cx="100" cy="100" r="90" [style.strokeDashoffset]="minutesStroke"></circle>
+                </svg>
+                <div id="minutes"> {{ minutes }} </div>
+            </div>
+    
+            <div class="circle" style="--clr: #00E0DD">
+                <div class="dots sec_dot"></div>
+                <svg>
+                    <circle cx="100" cy="100" r="90"></circle>
+                    <circle cx="100" cy="100" r="90" [style.strokeDashoffset]="secondsStroke"></circle>
+                </svg>
+                <div id="seconds"> {{ seconds }} </div>
+            </div>
+    
         </div>
-
-        <div class="circle" style="--clr: #00E0DD">
-            <div class="dots hr_dot"></div>
-            <svg>
-                <circle cx="100" cy="100" r="90"></circle>
-                <circle cx="100" cy="100" r="90" [style.strokeDashoffset]="hoursStroke"></circle>
-            </svg>
-            <div id="hours"> {{ hours }} </div>
-        </div>
-        
-        <div class="circle" style="--clr: #00E0DD">
-            <div class="dots min_dot"></div>
-            <svg>
-                <circle cx="100" cy="100" r="90"></circle>
-                <circle cx="100" cy="100" r="90" [style.strokeDashoffset]="minutesStroke"></circle>
-            </svg>
-            <div id="minutes"> {{ minutes }} </div>
-        </div>
-
-        <div class="circle" style="--clr: #00E0DD">
-            <div class="dots sec_dot"></div>
-            <svg>
-                <circle cx="100" cy="100" r="90"></circle>
-                <circle cx="100" cy="100" r="90" [style.strokeDashoffset]="secondsStroke"></circle>
-            </svg>
-            <div id="seconds"> {{ seconds }} </div>
-        </div>
-
     </div>
 </div>
