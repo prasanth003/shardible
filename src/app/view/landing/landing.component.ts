@@ -1,4 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { landingDetails } from 'src/app/contents/landing-page.content';
+import { iLandingDetails } from 'src/app/interface/landing.interface';
 
 @Component({
   selector: 'shardible-landing',
@@ -8,6 +10,8 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class LandingComponent implements OnInit {
 
   public backgroundPosition: number = 0;
+
+  public landingDetails: iLandingDetails = landingDetails;
 
   constructor() { }
   

@@ -6,7 +6,7 @@
             <h6 class="heading">Get every news first! Join our community</h6>
 
             <div class="icons-container">
-                <a class="icon-button" *ngFor="let icon of scoialIcons" [href]="icon.link">
+                <a class="icon-button" *ngFor="let icon of scoialIcons" [href]="icon.link" target="_blank">
                     <fa-icon class="icons" [icon]="icon.icon"></fa-icon>
                 </a>
             </div>
@@ -20,9 +20,7 @@
             <p class="copyright">Shardible &copy; All rights reserved</p>
 
             <div class="quick-menu">
-                <a href="">Privacy Policy</a>
-                <a href="">Terms & Conditions</a>
-                <a href="">Contact Us</a>
+                <a *ngFor="let links of quickLinks" [href]="links.link" target="_blank">{{ links.name }}</a>
             </div>
 
         </div>

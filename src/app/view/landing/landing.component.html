@@ -5,10 +5,10 @@
             
             <div id="layout-bg" [ngStyle]="{'background-position-y': backgroundPosition + '%'}"></div>
 
-            <h1 class="title">Experience a new world of NFTs with <span class="colored-text">Shardible</span></h1>
+            <h1 class="title"> {{ landingDetails.title  }}<span class="colored-text">{{ landingDetails.highlight  }}</span></h1>
         
             <p class="paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, eius tenetur porro dignissimos fugiat accusantium modi corporis et totam, odio reprehenderit accusamus odit nostrum maxime! Delectus similique aperiam tenetur itaque.
+                {{ landingDetails.content  }}
             </p>
 
             <div id="layout-bg-2" [ngStyle]="{'background-position-y': backgroundPosition + '%'}"></div>

@@ -1,10 +1,10 @@
 <div class="container">
     <h6 class="heading mb-3">Partners</h6>
     
-    <div class="partners" *ngFor="let i of [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]">
+    <div class="partners" *ngFor="let partner of partners">
         <button class="partner-button">
-            <img src="../../../assets/shardible/img/shardem.png" alt="shardem" class="shardem-logo">
-            <span class="text">Shardeum</span>
+            <img [src]="'../../../assets/shardible/img/' + partner.icon" alt="shardem" class="shardem-logo">
+            <span class="text">{{ partner.name }}</span>
         </button>
     </div>
 

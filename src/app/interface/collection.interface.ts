@@ -8,3 +8,9 @@ export interface iCollection {
     price: string;
     bidRate: string;
 }
+
+
+export interface iCollectionContent {
+    title: string;
+    content: string;
+}

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faTwitter, faDiscord, faLinkedinIn, faFacebook, faTelegram, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { quickLinks } from 'src/app/contents/quickLinks.content';
+import { socialLinks } from 'src/app/contents/social-icons.content';
+import { iQuickLinks } from 'src/app/interface/quick-links.interface';
 import { iSocialIcons } from 'src/app/interface/social-icons.interface';
 
 
@@ -10,32 +13,8 @@ import { iSocialIcons } from 'src/app/interface/social-icons.interface';
 })
 export class FooterComponent implements OnInit {
 
-  public scoialIcons: iSocialIcons[] = [
-    {
-      icon: faTwitter,
-      link: ''
-    },
-    {
-      icon: faDiscord,
-      link: ''
-    },
-    {
-      icon: faLinkedinIn,
-      link: ''
-    },
-    {
-      icon: faFacebook,
-      link: ''
-    },
-    {
-      icon: faTelegram,
-      link: ''
-    },
-    {
-      icon: faInstagram,
-      link: ''
-    }
-  ]
+  public scoialIcons: iSocialIcons[] = socialLinks;
+  public quickLinks: iQuickLinks[] = quickLinks;
 
   constructor() { }
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { partners } from 'src/app/contents/partners.content';
+import { iPartners } from 'src/app/interface/partners.interface';
 
 @Component({
   selector: 'shardible-partners',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./partners.component.scss']
 })
 export class PartnersComponent implements OnInit {
+
+  public partners: iPartners[] = partners;
 
   constructor() { }
 

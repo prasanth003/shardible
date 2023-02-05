@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnDestroy, OnInit, Renderer2, AfterViewInit } from '@angular/core';
+import { roadMap } from 'src/app/contents/roadmap.content';
 import { iRoadMap } from 'src/app/interface/roadmap.interface';
 
 @Component({
@@ -11,48 +12,7 @@ export class RoadmapComponent implements OnInit, AfterViewInit, OnDestroy {
   private items!: NodeListOf<Element>;
   private observer!: IntersectionObserver;
 
-  public roadmapList: iRoadMap[] = [
-    {
-      name: 'Phase 1 - Jan 2023',
-      time: new Date('Janaury 01, 2023'),
-      points: [
-        'Create Artwork - Mutant Aquatic Warriors Club  (MAWC) NFTs',
-        'Shardible Website Development',
-        'Community Building',
-        'Marketing Campaigns',
-        'Shardible Landing Page Launch'
-      ]
-    },
-    {
-      name: 'Phase 2  - Feb 2023',
-      time: new Date('Feb 01, 2023'),
-      points: [
-        'Mutant Aquatic Warriors Club  (MAWC) NFTs Sale',
-        'Marketing Campaigns',
-        'Alpha Testnet Launch',
-        'Community Building'
-      ]
-    },
-    {
-      name: 'Phase 3  - Mar - April 2023',
-      time: new Date('Apr 01, 2023'),
-      points: [
-        'Shardible Beta Live - Mainnet',
-        'Marketing Campaigns',
-        'NFT Holder- Percentage Share Disbursal Start',
-        'Community Building'
-      ]
-    },
-    {
-      name: 'Phase 4  - May 2023',
-      time: new Date('May 01, 2023'),
-      points: [
-        'Develop JS APIs/SDKs',
-        'Create Shardible Custom Store Platform Update',
-        'Community Building'
-      ]
-    }
-  ]
+  public roadmapList: iRoadMap[] = roadMap;
 
   constructor(
     private el: ElementRef, private renderer: Renderer2
