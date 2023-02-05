@@ -1,0 +1,14 @@
+.timer {
+    display: block;
+}
+
+@media only screen and (max-width: 990px) {
+
+    .container {
+        padding-top: 0px !important; 
+    }
+    
+    .timer {
+        display: none !important;
+    }
+}

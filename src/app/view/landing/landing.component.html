@@ -14,8 +14,18 @@
             <div id="layout-bg-2" [ngStyle]="{'background-position-y': backgroundPosition + '%'}"></div>
 
             <div class="join-container">
-                <input type="text">
-                <button class="join-btn">Join whitelist</button>
+                <input type="text" [(ngModel)]="email" [style.paddingRight]="width + 'px'">
+                <button class="join-btn" id="joinBtn" (click)="joinWhitelist()">Join whitelist</button>
+            </div>
+
+
+            <div class="people-counter" *ngIf="getPeoples() && getPeoples().length > 0">
+                <div class="counter">
+                    <h3 class="heading-2">People in our community</h3>
+                    <p class="paragraph">
+                        + {{ getPeoples().length }} people joined
+                    </p>
+                </div>
             </div>
 
         </div>

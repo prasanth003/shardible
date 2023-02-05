@@ -15,6 +15,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CollectionsCardComponent } from './collections/collections-card/collections-card.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FeaturesComponent } from './features/features.component';
+import { LaunchTimerComponent } from './launch-timer/launch-timer.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,24 @@ import { FeaturesComponent } from './features/features.component';
     FooterComponent,
     LandingComponent,
     CollectionsCardComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    LaunchTimerComponent
   ],
   imports: [
     CommonModule,
     ViewRoutingModule,
     CarouselModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgCircleProgressModule.forRoot({
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300
+    }),
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class ViewModule { }
