@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { launchTime } from 'src/app/contents/launch-time.content';
 
 @Component({
   selector: 'launch-timer',
@@ -15,7 +16,7 @@ export class LaunchTimerComponent implements OnInit {
   public hoursStroke!: number;
   public minutesStroke!: number;
   public secondsStroke!: number;
-  public endDate = new Date('03/03/2023 00:00:00').getTime();
+  public endDate = new Date(launchTime).getTime();
   
   constructor() {}
 
