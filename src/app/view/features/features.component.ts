@@ -14,7 +14,7 @@ export class FeaturesComponent implements OnInit {
     if (scorllNumber > 2000) {
       setTimeout(() => {
         this.show = true;
-      }, 500);
+      }, 200);
     }
   }
   

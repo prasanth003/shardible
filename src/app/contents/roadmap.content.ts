@@ -14,7 +14,7 @@ export const roadMap: iRoadMap[] = [
     },
     {
       name: 'Phase 2  - Feb 2023',
-      time: new Date('Feb 01, 2023'),
+      time: new Date('Feb 28, 2023'),
       points: [
         'Mutant Aquatic Warriors Club  (MAWC) NFTs Sale',
         'Marketing Campaigns',
@@ -24,7 +24,7 @@ export const roadMap: iRoadMap[] = [
     },
     {
       name: 'Phase 3  - Mar - April 2023',
-      time: new Date('Apr 01, 2023'),
+      time: new Date('Apr 30, 2023'),
       points: [
         'Shardible Beta Live - Mainnet',
         'Marketing Campaigns',
@@ -34,7 +34,7 @@ export const roadMap: iRoadMap[] = [
     },
     {
       name: 'Phase 4  - May 2023',
-      time: new Date('May 01, 2023'),
+      time: new Date('May 31, 2023'),
       points: [
         'Develop JS APIs/SDKs',
         'Create Shardible Custom Store Platform Update',
