@@ -14,10 +14,16 @@
             
             <div id="layout-bg-2" [ngStyle]="{'background-position-y': backgroundPosition + '%'}"></div>
 
-            <div class="join-container">
-                <input type="text" [(ngModel)]="email" [style.paddingRight]="width + 'px'">
-                <button class="join-btn" id="joinBtn" (click)="joinWhitelist()">Join whitelist</button>
-            </div>
+            <form [formGroup]="form">
+                <div class="join-container">
+                    <input type="text" formControlName="email" [style.paddingRight]="width + 'px'">
+                    <button class="join-btn" id="joinBtn" (click)="joinWhitelist()">Join whitelist</button>
+                </div>
+                <span class="error" *ngIf="hasError('email', 'pattern')">
+                    Invalid email id
+                </span>
+            </form>
+
 
 
             <div class="people-counter" *ngIf="getPeoples() && getPeoples().length > 0">

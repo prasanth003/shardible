@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, HostListener } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { landingDetails } from 'src/app/contents/landing-page.content';
 import { iLandingDetails } from 'src/app/interface/landing.interface';
 
@@ -14,6 +15,10 @@ export class LandingComponent implements AfterViewInit {
   public width: number = 150;
   public email: string = "";
 
+  public form: FormGroup = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9][-a-z0-9._]+@([-_a-z0-9]+[.])+[a-z]{2,5}$')])
+  });
+
   constructor() { }
   
   @HostListener("window:scroll", [])
@@ -26,13 +31,17 @@ export class LandingComponent implements AfterViewInit {
     this.width = buttonWidth ? (buttonWidth + 20) : 150;
   }
 
+  public hasError = (controlName: string, errorName: string) => {
+    return this.form.controls[controlName].hasError(errorName);
+  }
+
   public joinWhitelist(): void {
-    if (this.email) {
-      let peoples: string[] = this.getPeoples();
-      peoples.push(this.email);
-      localStorage.setItem('peoples', JSON.stringify(peoples));
-      this.email = "";
-    }
+    // if (this.email) {
+    //   let peoples: string[] = this.getPeoples();
+    //   peoples.push(this.email);
+    //   localStorage.setItem('peoples', JSON.stringify(peoples));
+    //   this.email = "";
+    // }
   }
 
 

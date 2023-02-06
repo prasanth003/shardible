@@ -15,7 +15,7 @@ export class CollectionsComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
-    dots: false,
+    dots: true,
     navSpeed: 100,
     navText: ['', ''],
     autoWidth: true,
@@ -39,7 +39,9 @@ export class CollectionsComponent implements OnInit {
         items: 4
       }
     },
-    nav: false
+    nav: false,
+    dotsData: true,
+    freeDrag: true
   }
 
   public collections: iCollection[] = collections;
