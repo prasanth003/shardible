@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { landingDetails } from 'src/app/contents/landing-page.content';
 import { DataService } from 'src/app/controller/data.service';
 import { iLandingDetails } from 'src/app/interface/landing.interface';
+import { SnackbarService } from 'ngx-snackbar';
 
 @Component({
   selector: 'shardible-landing',
@@ -22,7 +23,10 @@ export class LandingComponent implements AfterViewInit, OnDestroy {
     email: new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9][-a-z0-9._]+@([-_a-z0-9]+[.])+[a-z]{2,5}$')])
   });
 
-  constructor(private data: DataService) {
+  constructor(
+    private data: DataService,
+    private snackbar: SnackbarService
+  ) {
     this.interval = setInterval(() => {
       this.getPeoples();
     }, 5000);
@@ -46,7 +50,9 @@ export class LandingComponent implements AfterViewInit, OnDestroy {
     if (this.form.valid) {
       this.data.registerEmail(this.form.value['email']).subscribe({
         next: (res: any) => {
-          console.log('res', res);
+          this.snackbar.add({
+            msg: 'Email sent to ' + this.form.value['email'] + '. Please verify your email'
+          });
           this.form.patchValue({ 'email': '' });
         }
       });
@@ -56,8 +62,10 @@ export class LandingComponent implements AfterViewInit, OnDestroy {
 
   private getPeoples(): void {
     this.data.getRegisterUsers().subscribe({
-      next: (res: any) => {
-        console.log('res', res);
+      next: (res: {TotalCount: number }) => {
+        if (res && res.TotalCount) {
+          this.totalUsers = res.TotalCount;
+        }
       }
     })
   }

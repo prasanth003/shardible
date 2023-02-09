@@ -17,6 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FeaturesComponent } from './features/features.component';
 import { LaunchTimerComponent } from './launch-timer/launch-timer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SnackbarModule } from 'ngx-snackbar';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CarouselModule,
     FontAwesomeModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    SnackbarModule.forRoot()
   ]
 })
 export class ViewModule { }

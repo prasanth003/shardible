@@ -208,3 +208,11 @@ body {
         font-size: 13px !important;
     }
 }
+
+
+::ng-deep {
+    .snackbars .snack {
+        background-color: $card-bg !important;
+        border-radius: 5px !important;
+    }
+}
