@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, HostListener } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { landingDetails } from 'src/app/contents/landing-page.content';
+import { DataService } from 'src/app/controller/data.service';
 import { iLandingDetails } from 'src/app/interface/landing.interface';
 
 @Component({
@@ -8,19 +9,25 @@ import { iLandingDetails } from 'src/app/interface/landing.interface';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss']
 })
-export class LandingComponent implements AfterViewInit {
+export class LandingComponent implements AfterViewInit, OnDestroy {
 
   public backgroundPosition: number = 0;
   public landingDetails: iLandingDetails = landingDetails;
   public width: number = 150;
-  public email: string = "";
+  public totalUsers: number = 0;
+
+  private interval: any;
 
   public form: FormGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9][-a-z0-9._]+@([-_a-z0-9]+[.])+[a-z]{2,5}$')])
   });
 
-  constructor() { }
-  
+  constructor(private data: DataService) {
+    this.interval = setInterval(() => {
+      this.getPeoples();
+    }, 5000);
+  }
+
   @HostListener("window:scroll", [])
   onWindowScroll() {
     this.backgroundPosition = (window.pageYOffset / 10) * 80;
@@ -36,21 +43,26 @@ export class LandingComponent implements AfterViewInit {
   }
 
   public joinWhitelist(): void {
-    // if (this.email) {
-    //   let peoples: string[] = this.getPeoples();
-    //   peoples.push(this.email);
-    //   localStorage.setItem('peoples', JSON.stringify(peoples));
-    //   this.email = "";
-    // }
+    if (this.form.valid) {
+      this.data.registerEmail(this.form.value['email']).subscribe({
+        next: (res: any) => {
+          console.log('res', res);
+          this.form.patchValue({ 'email': '' });
+        }
+      });
+    }
   }
 
 
-  public getPeoples(): string[] {
-    let parsedString: string | null = localStorage.getItem('peoples');
-    if (parsedString) {
-      return JSON.parse(parsedString)
-    } else {
-      return []
-    }
+  private getPeoples(): void {
+    this.data.getRegisterUsers().subscribe({
+      next: (res: any) => {
+        console.log('res', res);
+      }
+    })
+  }
+
+  public ngOnDestroy(): void {
+    clearInterval(this.interval);
   }
 }

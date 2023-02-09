@@ -26,11 +26,11 @@
 
 
 
-            <div class="people-counter" *ngIf="getPeoples() && getPeoples().length > 0">
+            <div class="people-counter" *ngIf="totalUsers">
                 <div class="counter">
                     <h3 class="heading-2">People in our community</h3>
                     <p class="paragraph">
-                        + {{ getPeoples().length }} people joined
+                        + {{ totalUsers }} people joined
                     </p>
                 </div>
             </div>
