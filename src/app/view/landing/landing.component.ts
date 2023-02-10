@@ -54,6 +54,12 @@ export class LandingComponent implements AfterViewInit, OnDestroy {
             msg: 'Email sent to ' + this.form.value['email'] + '. Please verify your email'
           });
           this.form.patchValue({ 'email': '' });
+        },
+        error: (err: any) => {
+          this.snackbar.add({
+            msg: 'Email already exits. Please try with different email',
+            background: '#f44336'
+          });
         }
       });
     }
